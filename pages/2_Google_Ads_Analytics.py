@@ -3,6 +3,29 @@ import streamlit as st
 
 st.set_page_config(page_title="Google Ads Analytics", layout="wide")
 
+st.markdown(
+    """
+    <style>
+        .stApp {
+            background: #f6f8fb;
+        }
+
+        .block-container {
+            padding-top: 2rem;
+            padding-bottom: 3rem;
+        }
+
+        [data-testid="stMetric"] {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+        }
+    </style>
+    """,
+    unsafe_allow_html=True,
+)
 
 def safe_divide(numerator, denominator):
     if denominator is None or denominator == 0 or pd.isna(denominator):
