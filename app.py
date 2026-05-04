@@ -4,36 +4,60 @@ st.set_page_config(
     page_title="Ads Performance AI Dashboard",
     layout="wide",
 )
-
 st.markdown(
     """
     <style>
-        .main-title {
-            font-size: 2.6rem;
-            font-weight: 750;
-            margin-bottom: 0.25rem;
+        .stApp {
+            background: #f6f8fb;
         }
+
+        .block-container {
+            padding-top: 3rem;
+            padding-bottom: 3rem;
+        }
+
+        .main-title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            color: #111827;
+            margin-bottom: 0.35rem;
+        }
+
         .subtitle {
             color: #5f6b7a;
             font-size: 1.08rem;
-            max-width: 760px;
+            max-width: 800px;
             margin-bottom: 2rem;
+            line-height: 1.65;
         }
+
         div.stButton > button {
             width: 100%;
-            min-height: 132px;
+            min-height: 150px;
             border: 1px solid #d9e1ec;
-            border-radius: 8px;
+            border-radius: 12px;
             background: #ffffff;
-            font-size: 1.25rem;
-            font-weight: 650;
-            color: #1f2937;
-            box-shadow: 0 2px 10px rgba(15, 23, 42, 0.06);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #111827;
+            box-shadow: 0 8px 24px rgba(15, 23, 42, 0.08);
+            transition: all 0.2s ease;
         }
+
         div.stButton > button:hover {
             border-color: #2563eb;
             color: #1d4ed8;
             background: #f8fbff;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(37, 99, 235, 0.14);
+        }
+
+        [data-testid="stMetric"] {
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 10px;
+            padding: 16px;
+            box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
         }
     </style>
     """,
