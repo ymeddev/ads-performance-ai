@@ -63,7 +63,12 @@ def clickable_url(url):
         return ""
 
     clean_url = str(url).strip()
-    return f'<a href="{clean_url}" target="_blank">Open post</a>'
+
+    return (
+        f'<a class="post-link" href="{clean_url}" target="_blank">'
+        f'Open post &#8599;'
+        f'</a>'
+    )
 
 
 sample_meta_csv = """Campaign name,Ad name,Post URL,Spend,Reach,Impressions,Clicks,Engagements,Date
